@@ -1,5 +1,6 @@
 var express 		= require ("express"),
 	app 			= express(),
+	dotenv			= require('dotenv').config(),
 	bodyParser		= require("body-parser"),
 	mongoose		= require("mongoose"),
 	flash			= require("connect-flash"),
@@ -51,8 +52,6 @@ app.use(function(req,res,next){
 app.use(indexRoutes);
 app.use(commentRoutes);
 app.use(campgroundRoutes)
-
-
 
 
 app.listen (process.env.PORT || "3000", function(){

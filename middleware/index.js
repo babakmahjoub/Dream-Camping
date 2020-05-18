@@ -16,7 +16,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
 					next();
 				} else {
 					req.flash("error", "You do not have permission to do that");
-					res.redirect("back");
+					res.redirect("/back");
 				}
 			}
 		});
